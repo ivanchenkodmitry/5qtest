@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Devotionals
+    </title>
+</head>
+<body>
+
+    {% for devotional in devotionals %}
+        <p>Tille: {{ devotional.title }}</p>
+        <p>Month: {{ devotional.month }}</p>
+        <p>Day: {{ devotional.day }}</p>
+        <p>Body: {{ devotional.body|safe}}</p>
+    {% endfor %}
+    
+
+</body>
+</html>
