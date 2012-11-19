@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Devotionals
+    </title>
+</head>
+<body>
+
+    {% for devotional in devotionals %}
+        <div>
+            <p>Tille: {{ devotional.title }}</p>
+            <p>Month: {{ devotional.month }}</p>
+            <p>Day: {{ devotional.day }}</p>
+            <p>Body: {{ devotional.body|safe}}</p>
+        </div>
+    {% endfor %}
+
+
+    Total words in devotional: {{ count }}
+
+</body>
+</html>

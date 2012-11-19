@@ -1,4 +1,4 @@
-from devotional.views import get_devotional
+from devotional.views import get_devotional, get_devotionals_count, get_devotional_with_count
 from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
@@ -15,6 +15,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^get_devotional/(?P<month>\d+)/(?P<day>\d+)/$', get_devotional, name='det_devotional')
+    url(r'^get_devotional/(?P<month>\d+)/(?P<day>\d+)/$', get_devotional, name='det_devotional'),
+    url(r'^get_devotional/(?P<month>\d+)/(?P<day>\d+)/count/$', get_devotional_with_count),
+    url(r'^devotional_words_count/$', get_devotionals_count)
 
 )
